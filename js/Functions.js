@@ -1,5 +1,7 @@
 var Functions = (function () {
     
+    var total = 0;
+    
     function getProductName() {
         var productName = document.getElementById('name-field');
         var name = productName.value;
@@ -12,7 +14,8 @@ var Functions = (function () {
     function getProductPrice() {
         var productprice = document.getElementById('price-field');
         var price = parseInt(productprice.value);
-        productprice.value = "";        
+        productprice.value = "";           
+        total += price;
         return price;
     }
 
@@ -25,6 +28,12 @@ var Functions = (function () {
     }
 
 
+     function showTotal() {
+        var spam = document.getElementById('total');
+        spam.innerHTML = total || 0.0;
+    }
+    
+
     
     function addProduct(event) { 
         event.preventDefault();
@@ -34,9 +43,10 @@ var Functions = (function () {
 
         var newItem = createListItem(name, price);
         document.getElementById("list-products").appendChild(newItem); 
+        showTotal();
     }
     
-    
+
     
     function addListener() { 
         var btn = document.getElementById('btnAdd');

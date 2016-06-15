@@ -1,5 +1,6 @@
 
 .center-field{
+    width: 400px;
     margin: auto;
 }
 
@@ -22,4 +23,9 @@ fieldset{
 
 .height-fieldset{
     min-height: 300px;
+}
+
+
+#total{
+    color: red;
 }
