@@ -10,36 +10,34 @@
     
     <fieldset>
         <legend>Product</legend>
-           <form action="post">
-               
-               <table>
-                    <tr>
-                        <td>Name</td>
-                        <td>Price</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <input type="text" name="name" id="name-field" placeholder="Product name" width=""
-                        </td>
-                        <td>
-                            <input type="text" name="price" id="price-field" placeholder="Price">
-                        </td>
-                        <td>
-                            <input type="submit" value="Add" id="btn">
-                        </td>
-                    </tr>
-                </table>
-           </form>
+           <table>
+                <tr>
+                    <td>Name</td>
+                    <td>Price</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type="text" name="name" id="name-field" required="required" placeholder="Product name" width=""
+                    </td>
+                    <td>
+                        <input type="text" name="price" id="price-field" required="required" placeholder="Price">
+                    </td>
+                    <td>
+                        <input type="submit" value="Add" id="btnAdd">
+                    </td>
+                </tr>
+            </table>
     </fieldset>
     
     
     <fieldset class="height-fieldset">
         <legend>Shopping Cart</legend>
+        <ul id="list-products"> 
+            
+        </ul>
     </fieldset>
-    
-    
-    
-    
+
+    <script type="text/javascript" src="js/Functions.js"></script>
 </body>
 </html>
